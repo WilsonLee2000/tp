@@ -3,7 +3,7 @@
 
 activate Command
 Command -> Quadratic: quadratic.solveQuadratic()
-
+activate UI
 activate Quadratic
 Quadratic -> Quadratic: findA()
 activate Quadratic #FFBBBB
@@ -19,7 +19,6 @@ activate Quadratic #FFBBBB
 deactivate Quadratic
 Quadratic -> Quadratic: printAnswer()
 activate Quadratic #FFBBBB
-activate UI
 Quadratic -> UI: Ui.printQuadraticAnswer()
 activate UI
 UI --> Quadratic

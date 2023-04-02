@@ -9,6 +9,8 @@
 
 package seedu.badMaths;
 
+import seedu.badMaths.ui.Ui;
+
 public class Parser {
 
     protected String userInput;
@@ -30,7 +32,7 @@ public class Parser {
             return userInput.substring(userInput.indexOf(".") + 2); // absbsds
         } else {
             return "Invalid todo";
+
         }
     }
-
 }

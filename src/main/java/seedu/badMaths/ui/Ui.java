@@ -17,7 +17,7 @@ public class Ui {
 
 
     public static void printWelcomeMessage() {
-        System.out.println(logo + "\nYou can type 'Help.' to learn what I can do for you :)");
+        System.out.println(logo + "\nYou can type 'Help' to learn what I can do for you :)");
     }
     public static void printLogo(){
         System.out.println(logo);
