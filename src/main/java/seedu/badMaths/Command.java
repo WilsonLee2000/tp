@@ -48,7 +48,7 @@ public class Command {
 
     public boolean isAnInt(String todo) {
         try {
-            Integer.parseInt(todo);
+            Integer.parseInt(todo); // means is an integer
         } catch (NumberFormatException numberException) {
             Ui.printInvalidNumberEntered();
             return false; // if is not an integer, return false
@@ -94,8 +94,10 @@ public class Command {
                 break;
             //@@author WilsonLee2000
             case "List":
-                if (isAnInt(toDo) == false) {
-                    break;
+                if (toDo.equals("null")) {
+                    if ((isAnInt(toDo) == false)) {
+                        break;
+                    }
                 }
                 if (isInvalidTodo(toDo)) {
                     Ui.printNotes(notes.getAll());
