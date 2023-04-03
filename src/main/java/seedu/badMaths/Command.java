@@ -46,14 +46,14 @@ public class Command {
         return (index < 0 || index >= notes.getSize());
     }
 
-    public boolean isNotAnInt(String todo) {
+    public boolean isAnInt(String todo) {
         try {
             Integer.parseInt(todo);
         } catch (NumberFormatException numberException) {
             Ui.printInvalidNumberEntered();
-            return false;
+            return false; // if is not an integer, return false
         }
-        return true;
+        return true; // if is an Int, return true
     }
 
     public void executeCommand(NotesList notes) {
@@ -94,7 +94,7 @@ public class Command {
                 break;
             //@@author WilsonLee2000
             case "List":
-                if (isNotAnInt(toDo) == false) {
+                if (isAnInt(toDo) == false) {
                     break;
                 }
                 if (isInvalidTodo(toDo)) {
@@ -111,7 +111,7 @@ public class Command {
                 break;
             //@@author WilsonLee2000
             case "Delete":
-                if (isNotAnInt(toDo) == false) {
+                if (isAnInt(toDo) == false) {
                     break;
                 }
                 int deleteIndex = Integer.parseInt(toDo) - 1; // deleteIndex == 3
@@ -123,7 +123,7 @@ public class Command {
                 break;
             //@@author ZiqiuZeng
             case "Mark":
-                if (isNotAnInt(toDo) == false) {
+                if (isAnInt(toDo) == false) {
                     break;
                 }
                 int markIndex = Integer.parseInt(toDo) - 1;
@@ -135,7 +135,7 @@ public class Command {
                 break;
             //@@author ZiqiuZeng
             case "Unmark":
-                if (isNotAnInt(toDo) == false) {
+                if (isAnInt(toDo) == false) {
                     break;
                 }
                 int unmarkIndex = Integer.parseInt(toDo) - 1;
