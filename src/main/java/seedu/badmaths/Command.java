@@ -122,6 +122,7 @@ public class Command {
                 }
                 Ui.printDelete(notes.getText(deleteIndex), notes.getSize());
                 notes.remove(deleteIndex);
+                Storage.saveFile(filePath, notes.getAll());
                 break;
             //@@author ZiqiuZeng
             case "Mark":
