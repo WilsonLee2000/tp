@@ -58,7 +58,7 @@ public class Ui {
 
     //@@author WilsonLee2000
     public static void printInvalidNumberEntered() {
-        System.out.println("Input must be a number!");
+        System.out.println("Input must be an integer!");
     }
 
     //@@author ZiqiuZeng
